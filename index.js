@@ -8,8 +8,26 @@ const app = express();
 
 // Respond to GET requrests for the path "/"
 app.get('/', (req, res) => {
-    res.send('Hay');
+    // Note: this is different from the plain `res.end()`
+    res.send('Home Page');
 });
+
+app.get('/bye', (req, res) => {
+    res.send('Bye');
+});
+
+app.post('/', (req, res) => {
+    res.send('You send a POST');
+});
+
+app.put('/', (req, res) => {
+    res.send('You send a PUT');
+});
+
+app.delete('/', (req, res) => {
+    res.send('You send a DELETE');
+});
+
 
 // Listen on our PORT
 app.listen(PORT, () => {

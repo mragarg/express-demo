@@ -17,7 +17,7 @@ app.get('/bye', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    res.send('You send a POST');
+    res.send('You send a POST');,
 });
 
 app.put('/', (req, res) => {
